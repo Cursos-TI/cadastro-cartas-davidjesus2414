@@ -25,11 +25,11 @@ int main() {
 
   // Cadastro da Carta 1
      printf("Estado1 (A-H): ");
-     scanf("%c", &estado1);
-     printf("Codigo da carta1 (A01,B02...): ");
+     scanf(" %c", &estado1);
+     printf("Codigo da carta1 (A01,B02...): \n" );
      scanf("%s", codigo1);
      printf("Nome da cidade1: ");
-     scanf("%s", nomedacidade1);
+     scanf(" %[^\n]", nomedacidade1);
      printf("Populacao da carta1: ");
      scanf("%d", &populacao1);
      printf("Area da carta1: ");
@@ -41,11 +41,11 @@ int main() {
 
   // Cadastro da Carta 2
      printf("Estado2 (A-H): ");
-     scanf("%c", &estado2);
-     printf("Codigo da carta2 (A01,B02...): ");
+     scanf(" %c", &estado2);
+     printf("Codigo da carta2 (A01,B02...): \n");
      scanf("%s", codigo2);
      printf("Nome da cidade2: ");
-     scanf("%s", nomedacidade2);
+     scanf(" %[^\n]", nomedacidade2);
      printf("Populacao da carta2: ");
      scanf("%d", &populacao2);
      printf("Area da carta2: ");
@@ -60,10 +60,10 @@ int main() {
      printf("Estado: %c\n", estado1);
      printf("Codigo: %s\n", codigo1);
      printf("Nome da cidade: %s\n", nomedacidade1);
-     printf("Populacao da carta: %d", populacao1);
-     printf("Area da carta: %f", area1);
-     printf("PIB da carta: %f", PIB1);
-     printf("Pontos turisticos da carta: %d", pontosturisticos1);
+     printf("Populacao da carta: %d\n", populacao1);
+     printf("Area da carta: %.2f\n", area1);
+     printf("PIB da carta: %.2f\n", PIB1);
+     printf("Pontos turisticos da carta: %d\n", pontosturisticos1);
 
   // Exibição da Carta 2
      printf("\n========== Carta 2 ==========\n");
@@ -71,8 +71,8 @@ int main() {
      printf("Codigo: %s\n", codigo2);
      printf("Nome da cidade: %s\n", nomedacidade2);
      printf("Populacao da carta: %d\n", populacao2);
-     printf("Area da carta: %f\n", area2);
-     printf("PIB da carta: %f\n", PIB2);
+     printf("Area da carta: %.2f\n", area2);
+     printf("PIB da carta: %.2f\n", PIB2);
      printf("Pontos turisticos da carta: %d\n", pontosturisticos2);
 
 
