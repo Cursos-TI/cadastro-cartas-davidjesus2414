@@ -106,6 +106,10 @@ int main() {
      densidadepopulacional2 = 0;
      PIBperCapita1 = 1;
      PIBperCapita2 = 0;
+     superpoder1 = 1;
+     superpoder2 = 0;
+     pontosturisticos1 = 1;
+     pontosturisticos2 = 0;
      
    
 
@@ -123,16 +127,16 @@ int main() {
      {
      case 'A':
      case 'a':
-        printf("Voce escolheu Densidade Populacional\n");
-        resultado1 = densidadepopulacional1 > densidadepopulacional2 ? 0 : 1;
+        printf("\n######Voce escolheu Densidade Populacional######\n");
+        resultado1 = densidadepopulacional1 > densidadepopulacional2 ? 1 : 0;
+
         break;
         case 'B':
         case 'b':
-        printf("Voce escolheu PIB per Capita\n");
+        printf("\n######Voce escolheu PIB per Capita######\n");
         resultado1 = PIBperCapita1 > PIBperCapita2 ? 1 : 0;
         break;
-        
-        default:
+     default:
         break;
      }
 
@@ -152,25 +156,44 @@ int main() {
             {
             case 'A':
             case 'a':
-                printf("Voce escolheu Densidade Populacional\n");
-                resultado2 = densidadepopulacional1 > densidadepopulacional2 ? 0 : 1;
+                printf("\n######Voce escolheu Densidade Populacional######\n");
+                resultado2 = densidadepopulacional1 > densidadepopulacional2 ? 1 : 0;
                 break;
             case 'B':
             case 'b':
-                printf("Voce escolheu PIB per Capita\n");
+                printf("\n######Voce escolheu PIB per Capita######\n");
                 resultado2 = PIBperCapita1 > PIBperCapita2 ? 1 : 0;
                 break;
             default:    
                 break;
             }
 
+            if (resultado1 == 1) {
+            printf("\nCarta 2 venceu a Densidade Populacional!\n");
+            printf("Carta 2:%s\n", estado2);
+        } else {
+            printf("\nCarta 1 venceu a Densidade Populacional!\n");
+            printf("Carta 1:%s\n", estado1);
+        }
+
+         if (resultado1 == 1) {
+            printf("\nCarta 1 venceu o PIB per Capita!\n");
+            printf("Carta 1:%s\n", estado1);
+        } else {
+            printf("\nCarta 2 venceu o PIB per Capita!\n");
+            printf("Carta 2:%s\n", estado2);
+        }
+
+        
 
             if (resultado1 == resultado2) {
                 printf("Empate! Nao houve vencedor.\n");
             } else if (resultado1 > resultado2) {
-                printf("Carta 1 venceu!\n");
+                printf("\nCarta 1 venceu a Partida!\n");
+                printf("Carta 1:%s\n", estado1);
             } else {
-                printf("Carta 2 venceu!\n");
+                printf("Carta 2 venceu a Partida!\n");
+                printf("Carta 2:%s\n", estado2);
             }
         }
     return 0;
